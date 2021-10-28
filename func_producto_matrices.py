@@ -1,7 +1,7 @@
 producto_MxH = []
 M = []
 H = []
-filas = columnas = 3
+filas = columnas = 2
 total = filas * columnas
 
 elementoM = 0
@@ -22,7 +22,9 @@ for i in range(filas):
         elementoH -= 1
     H.append(filaH)
 
+print('Matriz M:')
 print(M)
+print('Matriz H:')
 print(H)
 
 for i in range(filas):
@@ -37,6 +39,7 @@ for i in range(filas):
         fila_prod.append(elem_matriz)
     producto_MxH.append(fila_prod)
 
+print('Matriz MxH:')
 print(producto_MxH)
 
 
