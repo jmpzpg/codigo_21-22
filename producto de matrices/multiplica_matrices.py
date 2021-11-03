@@ -39,8 +39,8 @@ def func_multiplica_vectores(v1,v2):
 
 # matriz_M = [[1,2],[3,4]]
 # matriz_H = [[4,3],[2,1]]
-filas = 2
-columnas = 2
+filas = 3
+columnas = 3
 matriz_M = func_dame_matriz_ascendente(filas,columnas)
 matriz_H = func_dame_matriz_descendente(filas,columnas)
 producto_MxH = []
