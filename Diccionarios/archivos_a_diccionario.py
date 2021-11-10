@@ -1,5 +1,6 @@
 from genericpath import isdir
 import os
+import pprint
 from config_rutas import RUTA_BASE, RUTA_CODIGO, MI_CARPETA
 
 #nuevo_dir = os.chdir('/')
@@ -23,12 +24,24 @@ def func_leer_archivo(ruta, nom_archivo, modo_ap):
 
 clear()
 x = func_leer_archivo(RUTA_BASE + RUTA_CODIGO, '/MiPrueba.txt', 'r')
-print(x)
-
+#print(x)
+clave = 0
 dic_salida = {}
-for j in range(len(x)):
-    for i in range(5):
-        list_aux = x[i].split(',')
-        dic_salida[(i+j)] = list_aux[i]
+lista_general = []
+
+for i in x:
+    lista_de_fila = i[:-1:].split(',')
+    for k in range(len(lista_de_fila)):
+        dic_salida[clave] = lista_de_fila[k]
+        clave += 1
         
-        pass
+
+
+""" for j in range(len(x)):
+    list_aux = x[j].split(',')
+    for i in range(len(list_aux)):
+        list_aux_2 = x[i].split(',')
+        dic_salida[(i+j)] = list_aux_2[i]
+         """
+
+pprint.pprint(dic_salida)
