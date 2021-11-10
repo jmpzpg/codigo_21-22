@@ -22,7 +22,7 @@ def func_busca_archivos(ruta, extension='.py'):
     for a in archivos:
         if a.is_file():
             if a.name.endswith(extension):
-                corte = a.name[:-long_extension:]
+                corte = a.name[:-long_extension :]
                 lista.append(corte)
     return lista
 
