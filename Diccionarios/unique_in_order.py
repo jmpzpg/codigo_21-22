@@ -9,6 +9,30 @@ preserving the original order of elements.
 
 """
 
+
+def unique_in_order(iterable: str):
+    cadena_a_lista = list(iterable)
+    lista_salida = []
+    if cadena_a_lista != []:
+        lista_salida.append(cadena_a_lista[0])
+        for i in cadena_a_lista:
+            if i != lista_salida[len(lista_salida)-1]:
+                lista_salida.append(i)
+    return lista_salida
+
+
+
+#y = unique_in_order_total('AABBcddAB')
+x = unique_in_order('AABBcddAB')
+#print(y)
+print(x)
+
+
+
+#---------------------------------------------------------------------------
+
+
+
 def unique_in_order_total(iterable: str):
     lista_salida = []
     cadena_a_lista = list(iterable)
@@ -29,19 +53,3 @@ def unique_in_order2(iterable: str):
     return lista_salida
 
 
-def unique_in_order(iterable: str):
-    cadena_a_lista = list(iterable)
-    lista_salida = []
-    if cadena_a_lista != []:
-        lista_salida.append(cadena_a_lista[0])
-        for i in cadena_a_lista:
-            if i != lista_salida[len(lista_salida)-1]:
-                lista_salida.append(i)
-    return lista_salida
-
-
-
-y = unique_in_order_total('AABBcddAB')
-x = unique_in_order('AABBcddAB')
-print(y)
-print(x)

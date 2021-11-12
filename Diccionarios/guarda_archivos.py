@@ -29,5 +29,6 @@ for i in range(0,len(lista),5):
     manejador.write(linea)
     pass
 
+
 manejador.close()
 #carpeta_trabajo = os.scandir(RUTA_BASE)
