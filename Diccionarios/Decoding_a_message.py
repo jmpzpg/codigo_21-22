@@ -35,7 +35,7 @@ def decode(message):
     lista_cad_in = list(message)
     lista_salida = []
     for i in lista_cad_in:
-        if i == ' ' or i == '.' or i == ',':
+        if i == ' ' or i == '.' or i == ',':  # NO isalpha()
             lista_salida.append(i)
         else:
             indice_derecho = listado_derecho.index(i)
