@@ -18,6 +18,6 @@ for diccionario in lista_diccionarios:
         supervivientes += 1
     else:
         muertos += 1
-
+ 
 print('Numero de muertos = ' + str(muertos))
 print('Numero de supervivientes = ' + str(supervivientes))
