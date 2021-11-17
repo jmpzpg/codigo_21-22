@@ -26,17 +26,19 @@ segunda_clase_m = 0
 primera_clase_v = 0
 primera_clase_m = 0 """
 
+dicc_clases = {1: 'clase1', 2: 'clase2', 3: 'clase3'}
+
 dicc_salida = {'supervivientes': 0, 'h_v': 0, 'm_v': 0, 'clase1_h_v': 0, 'clase1_m_v': 0,
     'clase2_h_v': 0, 'clase2_m_v': 0, 'clase3_h_v': 0, 'clase3_m_v': 0,
     'muertos': 0, 'h_m': 0, 'm_m': 0, 'clase1_h_m': 0, 'clase1_m_m': 0,
     'clase2_h_m': 0, 'clase2_m_m': 0, 'clase3_h_m': 0, 'clase3_m_m': 0 }
 
 lista_diccionarios = leer_dict()
-
+swi
 for diccionario in lista_diccionarios:
     if diccionario['Survived'] == '1':
         if diccionario['Sex'] == 'male':
-            if diccionario['Pclass'] == tercera_clase:
+            switcher diccionario['Pclass'] == tercera_clase:
                 supervivientes += 1
                 hombres_v += 1
 
