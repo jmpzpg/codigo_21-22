@@ -25,7 +25,7 @@ muerto_m_c1 = muerto_m_c2 = muerto_m_c3 = 0
 lista_diccionarios = leer_dict()
 
 for diccionario in lista_diccionarios:
-    superv = diccionario['Survived']
+    superv = diccionario['Survived']            # leemos los datos que contrastamos del diccionario
     sexo = diccionario['Sex']
     clase = diccionario['Pclass']
     if superv == '1':                           # si es superviviente
