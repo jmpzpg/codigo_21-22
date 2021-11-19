@@ -16,9 +16,7 @@ while not hemos_terminado_entrada:
 
     if bandera == '':
         hemos_terminado_entrada = True
-    else:
-        pass
-
+    
 print('--------------------------------')
 cont = 1
 for i in lista_diccionarios_usuarios:
