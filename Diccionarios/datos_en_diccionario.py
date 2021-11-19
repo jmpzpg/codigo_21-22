@@ -22,7 +22,8 @@ print('--------------------------------')
 cont = 1
 for i in lista_diccionarios_usuarios:
     
-    print(f'----- Usuario número {cont} -----')
+    print(f'------ Usuario número {cont} ------')
+    print('--------------------------------')
     for k,v in i.items():
         pprint.pprint(f'{k}: {v}')
     print('--------------------------------')
