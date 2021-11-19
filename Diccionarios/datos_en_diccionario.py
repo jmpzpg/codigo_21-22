@@ -3,11 +3,12 @@ import pprint
 DATOS = 4
 
 hemos_terminado_entrada = False
-datos_usuario = {'Nombre': None, 'Apellidos': None, 'Fecha de Nacimiento': None, 'Teléfono': None}
-lista_claves = list(datos_usuario.keys()) 
+
+ 
 lista_diccionarios_usuarios = []
 while not hemos_terminado_entrada:
-    
+    datos_usuario = {'Nombre': None, 'Apellidos': None, 'Fecha de Nacimiento': None, 'Teléfono': None}
+    lista_claves = list(datos_usuario.keys())
     for i in range(DATOS):
         datos_usuario[lista_claves[i]] = input(f"Por favor, introduzca {lista_claves[i]} a guardar: ")
     bandera = input("Para finalizar pulse ENTER. \nSi desea continuar, por favor, pulse la letra 'c': ")
