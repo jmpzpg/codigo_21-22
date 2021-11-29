@@ -1,8 +1,16 @@
+import re
+
 def sumar(cadena):
     total = 0
+
+    if re.search('//.\n', cadena): 
+        partes = cadena.partition('\n')
+        primer_trozo = partes[0]
+        separador = primer_trozo[2:3]
+        cadena = partes[2].replace(separador, ',')
+    
     cadena = cadena.replace('n',',')
     lista = cadena.split(',')
-    if lista[0] == "//;'\'"
     longitud = len(lista)
     if cadena == '': #cadena vacía
         return 0
@@ -44,7 +52,7 @@ def numeros_separados_por_n():
     return sumar('1n2n4n5,3')
 
 def barra_barra_punto_coma_devuelve_suma():
-    return sumar("//;\n1;2")
+    return sumar("//-\n1-2")
 # ---------------------------
 #print(mas_de_dos_numeros_da_error())
 
