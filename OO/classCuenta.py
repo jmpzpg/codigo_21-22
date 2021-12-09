@@ -1,8 +1,8 @@
 from classPersona import Persona
 
 class Cuenta():
-    __titular = Persona
-    __cantidad = 0.0
+    #__titular = Persona
+    #__cantidad = 0.0
 
     def __init__(self, titular, cantidad = 0.00) -> None:
         self.__titular = titular

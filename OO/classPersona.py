@@ -1,13 +1,13 @@
 import re
 
 class Persona():
-    __nombre = None
-    __edad = None
-    __dni = None
+    #__nombre = None
+    #__edad = None
+    #__dni = None
 
     def __init__(self, nombre = None, edad = None, dni = None) -> None:
         self.set_nombre(nombre)
-        self.__nombre = nombre
+        #self.__nombre = nombre
         self.__edad = edad
         self.__dni = dni
     
@@ -52,13 +52,14 @@ class Persona():
             return False
     
     def __validar_dni(self, dni):
-        if re.search("[\d]{8}[a-zA-Z]{1}", dni):
+        if re.search("^[\d]{8}[a-zA-Z]{1}$", dni):  #corregido en clase. para que solo busque los 9 y no los 9 dentro de cualesquiera
             return True
         else:
             return False
 
     def mostrar(self):
-        print(f'Mis datos son:\nNombre: {self.__nombre}\nEdad: {self.get_edad()}\nDNI: {self.get_dni()}')
+        #print(f'Mis datos son:\nNombre: {self.__nombre}\nEdad: {self.get_edad()}\nDNI: {self.get_dni()}')
+        return (f'Mis datos son:\nNombre: {self.__nombre}\nEdad: {self.get_edad()}\nDNI: {self.get_dni()}')
     
     def esMayorDeEdad(self):
         if int(self.__edad) > 18:
