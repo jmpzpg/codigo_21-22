@@ -24,4 +24,4 @@ def func_lista_de_personas():
 
 lista = func_lista_de_personas()
 for elem in lista:
-    print(elem.__str__())
+    print(elem)
