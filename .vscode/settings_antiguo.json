@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./examenDic",
         "-p",
         "test_*.py"
     ],
