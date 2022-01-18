@@ -12,35 +12,48 @@ Crear las pruebas unitarias para asegurar el correcto funcionamiento de la clase
 
 class Tiempo():
 
-    def __init__(self, h=1, m=1, s=1) -> None:
-        self.__hora = h
-        self.__minuto = m      
+    def __init__(self, h='00', m='00', s='00') -> None:
+        self.__hora = self.__tiempo_a_txt(h)
+        self.__minuto = self.__tiempo_a_txt(m)
+        self.__segundo = self.__tiempo_a_txt(s)
     
     @property
     def hora(self):
         return self.__hora
-    
     @hora.setter
     def hora(self, h):
-        self.__hora = h   
+        self.__hora = self.__tiempo_a_txt(h)  
 
     @property
     def minuto(self):
         return self.__minuto
-    
     @minuto.setter
     def minuto(self, m):
-        self.__minuto = m
+        self.__minuto = self.__tiempo_a_txt(m)
 
     @property
-    def area(self):
-        return self.__base * self.__minuto
+    def segundo(self):
+        return self.__segundo
+    @segundo.setter
+    def segundo(self,s):
+        self.__segundo = self.__tiempo_a_txt(s)
 
-    @property
-    def perimetro(self):
-        return 2 * self.__base + 2 * self.__minuto
+    def __tiempo_a_txt(self, t):
+        t_cad = str(t)
+        if len(t_cad) == 2:
+            return t_cad
+        else:
+            return '0'+ t_cad
+    
   
     def __str__(self):
-        return (f'Rectángulo de BASE =  {self.__base} y minuto = {self.__minuto}')
+        return (f'La Hora es: {self.__hora}:{self.__minuto}:{self.__segundo}')
 
 # =================================================================================
+
+t1 = Tiempo()
+t2 = Tiempo(20,00,00)
+t3 = Tiempo(23,55)
+print(t1)
+print(t2)
+print(t3)
