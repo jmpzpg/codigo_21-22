@@ -47,13 +47,13 @@ class Tiempo():
     
   
     def __str__(self):
-        return (f'La Hora es: {self.__hora}:{self.__minuto}:{self.__segundo}')
+        return (f'Tiempo guardado = {self.__hora}:{self.__minuto}:{self.__segundo}')
 
 # =================================================================================
 
 t1 = Tiempo()
-t2 = Tiempo(20,00,00)
-t3 = Tiempo(23,55)
+t2 = Tiempo(20)
+t3 = Tiempo(23,'55')
 print(t1)
 print(t2)
 print(t3)

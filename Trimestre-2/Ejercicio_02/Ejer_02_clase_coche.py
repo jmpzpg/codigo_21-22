@@ -8,11 +8,11 @@ Crear las pruebas unitarias necesarias para comprobar que se pueden establecer y
 
 class Coche():
 
-    def __init__(self, marca='marca', modelo='modelo', color='color', num_puertas='puertas', matricula='matricula') -> None:
+    def __init__(self, marca='', modelo='', color='', num_puertas='', matricula='') -> None:
         self.__marca = marca
         self.__modelo = modelo  
         self.__color = color
-        self.__num_puertas = num_puertas 
+        self.__num_puertas = str(num_puertas) 
         self.__matricula = matricula    
     
     @property
@@ -41,7 +41,7 @@ class Coche():
         return self.__num_puertas
     @num_puertas.setter
     def num_puertas(self, num):
-        self.__num_puertas = num
+        self.__num_puertas = str(num)
 
     @property
     def matricula(self):
