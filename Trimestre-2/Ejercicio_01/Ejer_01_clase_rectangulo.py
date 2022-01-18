@@ -6,7 +6,6 @@ Crear las pruebas unitarias necesarias para asegurar que funciona correctamente.
 
 """
 
-
 class Rectangulo():
 
     def __init__(self, base=1, altura=1) -> None:
