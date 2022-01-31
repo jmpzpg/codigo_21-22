@@ -8,10 +8,10 @@ def leer_csv_normal():
         filas = csv_in.readlines()
         for f in filas:
             print(f)
-            print(f.split())
+            #print(f.split())
 
 
-#leer_csv_normal()
+leer_csv_normal()
 
 def leer_dict():
     csv_in = open(ruta + 'archivo.csv')
@@ -20,5 +20,5 @@ def leer_dict():
     csv_in.close()
     return lista_dict
 
-salida = leer_dict()
-print(salida)
+# salida = leer_dict()
+# print(salida)

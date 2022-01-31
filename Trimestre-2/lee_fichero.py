@@ -21,4 +21,4 @@ def lee_fichero(nombre):
 # ------------------------
 
 lee_fichero('archivo.txt')
-    
+     
