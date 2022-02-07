@@ -51,27 +51,25 @@ class Curso():
 
         try:
             with open(archivo, 'r') as manejador:
-        except FileNotFoundError:
-            print('Error al abrir el archivo. Verifique la ruta del mismo')
-        except:
-            print('Error inesperado abriendo el archivo')
-        else:
-            filas = manejador.readlines()
-            for fila_de_alumno in filas:
-                alum = []
-                lista_nombre_y_notas = fila_de_alumno[0:-1].split(',')
-                alum.append(lista_nombre_y_notas[0])
-                try:
+                filas = manejador.readlines()
+                for fila_de_alumno in filas:
+                    alum = []
+                    lista_nombre_y_notas = fila_de_alumno[0:-1].split(',')
+                    alum.append(lista_nombre_y_notas[0])
                     for nota in lista_nombre_y_notas[1:]:
                         if '.' in nota:
                             alum.append(float(nota))
                         else:
                             alum.append(int(nota))
-                except TypeError:
-                    print('El fichero contine alguna nota NO válida')
-                else:
                     obj_alum = Alumno(alum) 
                     lista_de_obj_alumnos.append(obj_alum)
+        except FileNotFoundError:
+                print('Error al abrir el archivo. Verifique la ruta del mismo')
+        except ValueError:
+                print('Error: El fichero contine alguna nota NO válida')
+        except:
+                print('Error inesperado abriendo el archivo')
+        else:
             return cls(nom_curso, lista_de_obj_alumnos)
 
 
@@ -107,8 +105,8 @@ clase2 = Curso('Geografía')
 print(clase2.alumnos_del_curso)
 clase = Curso.desde_csv(curso, archivo)
 print(clase)
-alumno_nuevo = Alumno(['Juan María', 5, 6, 7, 8, 9, 10])
-clase.add_alumno(alumno_nuevo)
-print(clase)
-print(clase.alumnos_del_curso)
-print(clase.alumnos_y_notas)
+#alumno_nuevo = Alumno(['Juan María', 5, 6, 7, 8, 9, 10])
+#clase.add_alumno(alumno_nuevo)
+#print(clase)
+#print(clase.alumnos_del_curso)
+#print(clase.alumnos_y_notas)
