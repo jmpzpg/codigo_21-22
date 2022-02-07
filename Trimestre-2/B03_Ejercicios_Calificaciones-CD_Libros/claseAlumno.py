@@ -2,7 +2,10 @@ class Alumno():
     def __init__(self, alumno_lista=[]) -> None:
         if alumno_lista:
             self.__nombre = alumno_lista[0]
-            self.__notas = alumno_lista[1:]
+            if self.valida_notas(alumno_lista[1:]):
+                self.__notas = alumno_lista[1:]
+            else:
+                raise Exception('Notas no válidas')
             self.__calificacion = self.calcula_calificacion()
         else:
             self.__nombre = ''
@@ -74,13 +77,3 @@ class Alumno():
                 if not type(elem) in (int,float) or not 0.0 <= elem <= 10.0:
                     valido = False
         return valido
-
-
-    # Añadido en clase del lunes 31-01-22 para el ejemplo de tener los alumnos con sus notas en un CSV
-    @classmethod
-    def alumnos_desde_csv(cls):
-        with open('archivo_alumnos.csv', 'r') as manejador:
-            filas = manejador.readline()
-            cls.nom_alumno = filas[0][0]
-            for elem in filas:
-                pass
