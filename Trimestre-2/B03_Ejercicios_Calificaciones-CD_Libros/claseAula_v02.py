@@ -4,13 +4,19 @@ from claseAlumno import Alumno
 
 class Aula():
     def __init__(self, nom, archivo) -> None:
-        if path.exists(archivo):
+        if self.__comprueba_archivo(archivo):
             self.__nombre_clase = nom
             self.__alumnos = []
             self.__carga_alumnos(archivo)
         else:
             raise FileNotFoundError('El archivo no existe o no se ha encontrado. Revise la ruta del archivo')
 
+    def __comprueba_archivo(self, archivo):
+        if path.exists(archivo):
+            resp = True
+        else:
+            resp = False
+        return resp
     
     def __carga_alumnos(self, archivo):
         listado = self.__lista_de_alumnos_desde_csv(archivo)
@@ -33,7 +39,7 @@ class Aula():
         return lista_de_alumnos
 
     def __str__(self) -> str:
-        salida = f'____________________________________\nClase {self.__nombre_clase}. Alumnos y calificaciones:\n------------------------------------\n'
+        salida = f'_______________________________________\nClase de {self.__nombre_clase} - Alumnos y calificaciones:\n---------------------------------------\n'
         for alum in self.__alumnos:
             salida += f'    {alum.nom_alumno} ---> {alum.calificacion}\n'
         return salida
