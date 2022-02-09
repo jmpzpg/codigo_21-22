@@ -1,3 +1,6 @@
+'''  Jose Manuel Perez Puig
+clase para las pruebas unitarias de la clase Curso'''
+
 import unittest
 from claseCurso import Curso
 from claseAlumno import Alumno

@@ -1,3 +1,6 @@
+'''  Jose Manuel Perez Puig
+Clase para modelar una lista de libros con funcionalidades típicas'''
+
 class Alumno():
     def __init__(self, alumno_lista=[]) -> None:
         if alumno_lista:

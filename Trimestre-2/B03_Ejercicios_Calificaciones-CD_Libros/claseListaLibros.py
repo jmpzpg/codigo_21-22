@@ -1,4 +1,5 @@
-'''clase para modelar el objeto lista. En este caso una lista de libros que hay que mantener siempre ordenados'''
+''' Jose Manuel Perez Puig
+clase para modelar el objeto lista. En este caso una lista de libros que hay que mantener siempre ordenados'''
 
 OVER = 'ERROR: En esa posición no hay ningún libro. Número de libros actual = '
 

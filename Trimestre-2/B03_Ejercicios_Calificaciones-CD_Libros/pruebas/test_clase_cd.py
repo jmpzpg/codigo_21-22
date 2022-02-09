@@ -1,3 +1,6 @@
+'''  Jose Manuel Perez Puig
+clase para las pruebas unitarias de la clase CD'''
+
 import unittest
 from claseCD import CD, Cancion
 

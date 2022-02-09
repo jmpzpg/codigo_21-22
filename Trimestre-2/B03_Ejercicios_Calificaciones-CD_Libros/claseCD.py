@@ -1,4 +1,5 @@
-'''clase que modela una lista de reproduccion'''
+'''  Jose Manuel Perez Puig
+clase que modela una lista de reproduccion'''
 
 from claseCancion import Cancion
 OVER = 'ERROR: En esa posición no hay ninguna canción. Número de canciones actual = '

@@ -1,3 +1,6 @@
+'''  Jose Manuel Perez Puig
+Clase para modelar un aula y llevar los alumnos y sus notas'''
+
 from genericpath import exists
 from os import path
 from claseAlumno import Alumno
