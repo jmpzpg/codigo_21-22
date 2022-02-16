@@ -8,8 +8,10 @@ def __gestionar_archivo(archivo):
                 texto = manejador.readlines()
                 if not is_binary_string(texto):
                     print('el archivo NO es binario')
-        except Exception:
-            raise Exception('ERROR: el archivo pasado es un ficero binario y no se puede analizar. Por favor, elija un fichero de texto')
+        except Exception as e:
+            print(type(e))
+            print('ERROR: el archivo pasado es un ficero binario y no se puede analizar. Por favor, elija un fichero de texto')
+            
 
 def es_binario(archivo):
     lista_palabras = []
@@ -40,9 +42,9 @@ def es_binario(archivo):
                     else:
                         ocurrencias[palabra] = 1
         return [contador_lineas, contador_palabras, ocurrencias]
-    except UnicodeDecodeError:
-        raise Exception('ERROR: el archivo pasado es un ficero binario y no se puede analizar. Por favor, elija un fichero de texto')
-
+    except UnicodeDecodeError as e:
+        print('ERROR: el archivo pasado NO es un ficero de texto y no se puede analizar. Por favor, elija un fichero de texto')
+        
 
 
 archivo= 'fichero.png'
