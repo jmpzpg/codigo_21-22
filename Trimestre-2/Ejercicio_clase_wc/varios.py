@@ -47,7 +47,7 @@ def es_binario(archivo):
         
 
 
-archivo= 'fichero.png'
+archivo= 'fichero.txt'
 
 #s = 'Pingüino: Málaga es una ciudad fantástica y en Logroño me pica el... moño'
 #s2 = normalize("NFKD", s).encode("ascii","ignore").decode("ascii")

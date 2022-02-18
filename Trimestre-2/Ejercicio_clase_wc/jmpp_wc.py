@@ -53,3 +53,9 @@ class WC():
         except:
             raise Exception('Archivo no válido')
     
+    def contar_lineas(self):
+        pass
+    def __contar_palabras(self):
+        pass
+    def __limpiar_cadena(self):
+        pass
