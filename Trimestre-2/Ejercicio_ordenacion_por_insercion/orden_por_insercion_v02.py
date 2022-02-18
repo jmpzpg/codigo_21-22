@@ -1,12 +1,13 @@
 '''     Jose Manuel Perez Puig
-Versión deprisa y corriendo para que funcionara. La versión 2 está mucho más optimizada
+Nos damos cueta de que el recorrido en el metodo insercion NO tiene que hacerlo completo.
+Solo hay que comparar con los elementos a la izquierda del elemento actual y cuando se haga
+la insercion ya no hay que seguir comparando
 '''
 def insercion(lista, actual):
-    for i in range(len(lista)):
+    for i in range(actual):
         if lista[actual] < lista[i]:
             lista.insert(i, lista.pop(actual))
-            if actual == len(lista)-1:
-                break
+            break
     return lista
 
 def ordena_lista(lista_in):
