@@ -9,6 +9,7 @@ def insercion(lista, actual):
 
 
 def ordena_lista(lista):
+    salida = []
     for posicion in range(len(lista)-1):
         posicion += 1
         salida = insercion(lista, posicion)
@@ -20,3 +21,4 @@ lista1 = [3,2,1]
 lista_desordenada = [4,3,2,10,12,1,5,6] 
 print(ordena_lista(lista1))
 print(lista1)
+print(ordena_lista(lista_desordenada))
