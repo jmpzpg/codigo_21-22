@@ -1,8 +1,7 @@
 '''     Jose Manuel Perez Puig
 '''
-
 import unittest
-from orden_por_insercion import ordena_lista
+from orden_por_insercion_v02 import ordena_lista
 
 class TestOrdenInsercion(unittest.TestCase):
     def test_ordena_lista_vacia_dev_lista_vacia(self):

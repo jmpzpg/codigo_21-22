@@ -17,7 +17,7 @@ def es_binario(archivo):
     lista_palabras = []
     ocurrencias = {}
     basura = ',;.:-_"?¿¡!'
-    vocales = {'á':'a','é':'e','í':'i','ó':'o','ú':'u'}
+    vocales_acentuadas = {'á':'a','é':'e','í':'i','ó':'o','ú':'u'}
     contador_palabras = contador_lineas = 0
     try:
         with open(archivo, "r") as manejador:
@@ -30,10 +30,10 @@ def es_binario(archivo):
                 elif l.endswith(' '):
                     l = l[0:-1]
                 for c in l:
-                    if not c in basura and not c in vocales:
+                    if not c in basura and not c in vocales_acentuadas:
                         linea_limpia += c
-                    elif c in vocales:
-                        linea_limpia += vocales[c]
+                    elif c in vocales_acentuadas:
+                        linea_limpia += vocales_acentuadas[c]
                 lista_palabras = linea_limpia.split(' ')
                 for palabra in lista_palabras:
                     contador_palabras += 1
