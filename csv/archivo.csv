@@ -2,4 +2,5 @@ campo1,campo2,campo3,campo4,campo5
 matrices,1,genera_equipos,condicionales,funciones_01
 cortar_cadena,0,holamundo,matriz20x20,func_producto_matrices
 comparalistas,1,es_palindromo,multiplicaVectores,adivinaNumero
-matriz15x15,0,bucle_cadena,func_genera_equipos_v02
+matriz15x15,0,bucle_cadena,func_genera_equipos,v02
+matrices,1,genera_equipos,condicionales,funciones_01
