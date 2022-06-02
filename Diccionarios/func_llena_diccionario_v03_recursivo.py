@@ -1,3 +1,8 @@
+'''
+    Llenmaos el diccionario con los datos de persona, desde el teclado.
+    En esta ocasión lo hacemos de forma recursiva, en plan didáctico. No se pedia.
+'''
+
 from typing import Dict
 import pprint
 #----------------------------------------------
